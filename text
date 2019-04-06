@@ -1,0 +1,18 @@
+text
+
+ok so random number generator to choose the actions
+and a form of input to take the actions
+then when the dice rolls its chooses the item from the list
+
+one to start with
+
+out of ten
+
+number of optoins determins the number selection range for each option
+
+
+just bang it all in 1 component
+
+in app even
+
+so i need html, should probs use bootstrap
