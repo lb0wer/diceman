@@ -1,13 +1,14 @@
 {
-  "main.css": "/diceman/static/css/main.292f8f86.chunk.css",
-  "main.js": "/diceman/static/js/main.b70e6d2a.chunk.js",
-  "main.js.map": "/diceman/static/js/main.b70e6d2a.chunk.js.map",
-  "runtime~main.js": "/diceman/static/js/runtime~main.cdbdb1a5.js",
-  "runtime~main.js.map": "/diceman/static/js/runtime~main.cdbdb1a5.js.map",
-  "static/js/2.65aa1cca.chunk.js": "/diceman/static/js/2.65aa1cca.chunk.js",
-  "static/js/2.65aa1cca.chunk.js.map": "/diceman/static/js/2.65aa1cca.chunk.js.map",
-  "index.html": "/diceman/index.html",
-  "precache-manifest.fc2940a4abcad3e49db4de6fa9f09a2b.js": "/diceman/precache-manifest.fc2940a4abcad3e49db4de6fa9f09a2b.js",
-  "service-worker.js": "/diceman/service-worker.js",
-  "static/css/main.292f8f86.chunk.css.map": "/diceman/static/css/main.292f8f86.chunk.css.map"
+  "main.css": "/static/css/main.292f8f86.chunk.css",
+  "main.js": "/static/js/main.3fa48bac.chunk.js",
+  "main.js.map": "/static/js/main.3fa48bac.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+  "static/js/2.6efc73d3.chunk.js": "/static/js/2.6efc73d3.chunk.js",
+  "static/js/2.6efc73d3.chunk.js.map": "/static/js/2.6efc73d3.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.560f6d5f48f845db622d1d57292044ba.js": "/precache-manifest.560f6d5f48f845db622d1d57292044ba.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.292f8f86.chunk.css.map": "/static/css/main.292f8f86.chunk.css.map",
+  "static/media/dice-logo.png": "/static/media/dice-logo.8aa97c25.png"
 }
