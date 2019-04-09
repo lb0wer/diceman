@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import logo from'./dice-logo.png';
 
 class App extends Component {
   state;
@@ -16,6 +17,38 @@ class App extends Component {
 
   componentDidMount() {
     this.enterKeyListener();
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1>DiceLife</h1>
+          <img src={logo} height="180" width="215"/>
+          <p>Let fate dictate your life decisions</p>
+          <br/>
+          <div className="container-fluid">
+            {this.choiceList()}
+          </div>
+          <div className="container-fluid">
+            {this.newChoice()}
+          </div>
+          <br/>
+          {this.state.alert && this.alert()}
+          <div style={{ paddingLeft: '2em', paddingRight: '2em' }}>
+            <button type="button" className="btn btn-info btn-lg"
+              onClick={() => this.roll()}>
+              Roll
+            </button>
+          </div>
+          <br/>
+          <button type="button" className="btn btn-secondary"
+            onClick={() => this.reset()}>
+            Reset
+          </button>
+        </header>
+      </div>
+    );
   }
 
   get numChoices() {
@@ -45,7 +78,7 @@ class App extends Component {
   newChoice() {
     return (
         <div className="input-group mb-3">
-          <input type="text" className="form-control" placeholder="New Option"
+          <input type="text" className="form-control" placeholder="New Choice"
             value={this.state.newChoice} 
             onChange={this.newChoiceChange.bind(this)} 
             onSubmit={this.addChoice.bind(this)}
@@ -118,36 +151,6 @@ class App extends Component {
       choices: [],
       newChoice: '',
     })
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1>DiceLife</h1>
-          <br/>
-          <div className="container-fluid">
-            {this.choiceList()}
-          </div>
-          <div className="container-fluid">
-            {this.newChoice()}
-          </div>
-          <br/>
-          {this.state.alert && this.alert()}
-          <div style={{ paddingLeft: '2em', paddingRight: '2em' }}>
-            <button type="button" className="btn btn-primary btn-lg"
-              onClick={() => this.roll()}>
-              Roll
-            </button>
-          </div>
-          <br/>
-          <button type="button" className="btn btn-secondary"
-            onClick={() => this.reset()}>
-            Reset
-          </button>
-        </header>
-      </div>
-    );
   }
 }
 
