@@ -36,6 +36,7 @@ class App extends Component {
           <br/>
           {this.state.alert && this.alert()}
           <div style={{ paddingLeft: '2em', paddingRight: '2em' }}>
+            <br/>
             <button type="button" className="btn btn-info btn-lg"
               onClick={() => this.roll()}>
               Roll
@@ -46,6 +47,8 @@ class App extends Component {
             onClick={() => this.reset()}>
             Reset
           </button>
+          <br/>
+          <br/>
         </header>
       </div>
     );
@@ -61,7 +64,10 @@ class App extends Component {
     let i = 1;
     for( let choice of this.state.choices) {
       let style = i === this.state.chosenChoice ?
-        { color: 'green' } :
+        { 
+          backgroundColor: 'aqua', 
+          color: 'black' 
+        } :
         { color: 'black' };
       choiceElements.push(
         <li key={i} style={style} className="list-group-item">{i}. {choice}</li>
@@ -85,7 +91,7 @@ class App extends Component {
             id='newChoice'
           />
           <div className="input-group-append">
-            <button className="btn btn-outline-secondary" type="button"
+            <button className="btn btn-info" type="button"
               onClick={() => this.addChoice()}>
               Add</button>
           </div>
@@ -131,16 +137,15 @@ class App extends Component {
 
   alert() {
     if(this.numChoices < 1) {
-      return <div className="alert alert-success" role="alert">
-        Please enter an option
+      return <div className="alert alert-info" role="alert">
+        <p>Please enter an option</p>
     </div>
     }
     return (
-      <div className="alert alert-success" role="alert">
-        {`The dice has chosen. You must take choice 
-          ${this.state.chosenChoice}:
-          ${this.state.choices[this.state.chosenChoice -1]}
-        `}
+      <div className="alert alert-info" role="alert">
+        <p style={{fontSize: '0.6em'}}>The dice has chosen</p>
+        <p style={{fontSize: '0.6em'}}>You must take choice {this.state.chosenChoice}</p>
+        <p>{this.state.choices[this.state.chosenChoice -1]}</p>
       </div>
     )
   }
